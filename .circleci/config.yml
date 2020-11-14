@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run:
-        name: practice
-        command: |
-          echo "hello, world"
-          ls -al
+          name: practice
+          command: |
+            echo "hello, world"
+            ls -al
