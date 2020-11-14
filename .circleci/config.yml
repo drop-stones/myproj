@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: g++
+      - image: circleci/ruby:2.4.1
     working_directory: ~/work
     steps:
       - checkout
