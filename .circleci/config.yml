@@ -2,11 +2,19 @@ version: 2
 jobs:
   build:
     docker:
-      - image: clang:latest
+      - image: g++:latest
+    working_directory: ~/work
     steps:
       - checkout
+      - run: make
+      - run: |
+          # tell the operating system to remove the file size limit on coredump files
+          ulimit -c unlimited
+          ./dump
       - run:
-          name: practice
           command: |
-            echo "hello, world"
-            ls -al
+            mkdir -p /tmp/core_dumps
+            cp core.* /tmp/core_dumps
+            when: on_fail
+      - store_artifacts:
+          path: /tmp/core_dumps
