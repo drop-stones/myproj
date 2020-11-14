@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
         name: practice
-        command:
+        command: |
           echo "hello, workd"
           ls -al
           cat feature
