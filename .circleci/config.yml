@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: g++:latest
+      - image: g++
     working_directory: ~/work
     steps:
       - checkout
