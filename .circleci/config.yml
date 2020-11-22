@@ -6,7 +6,7 @@ jobs:
     working_directory: ~/work
     steps:
       - checkout
-      - run: echo "Hello, World"
+      - run: echo "Hello, World!!"
       - run: ls
       - add_ssh_keys:
             fingerprints:
