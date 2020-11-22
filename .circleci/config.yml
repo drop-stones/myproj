@@ -7,6 +7,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello, World"
+      - run: ls
       - add_ssh_keys:
             fingerprints:
               - "e3:5f:fd:57:04:b5:e0:be:8c:8b:80:02:96:d7:66:09"
